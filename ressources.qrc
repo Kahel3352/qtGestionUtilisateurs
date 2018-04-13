@@ -1,1 +1,6 @@
-<RCC/>
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>img/config-users.png</file>
+        <file>img/access.png</file>
+    </qresource>
+</RCC>

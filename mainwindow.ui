@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>948</width>
+    <width>1218</width>
     <height>627</height>
    </rect>
   </property>
@@ -14,246 +14,348 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QVBoxLayout" name="verticalLayout_3">
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
     <item>
      <widget class="QTabWidget" name="tabWidget">
+      <property name="minimumSize">
+       <size>
+        <width>1200</width>
+        <height>0</height>
+       </size>
+      </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tabUsers">
+       <attribute name="icon">
+        <iconset resource="ressources.qrc">
+         <normaloff>:/new/prefix1/img/access.png</normaloff>:/new/prefix1/img/access.png</iconset>
+       </attribute>
        <attribute name="title">
         <string>Utilisateurs</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_5">
         <item>
-         <widget class="QSplitter" name="splitter">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
+         <widget class="QTableWidget" name="tableUser">
+          <property name="maximumSize">
+           <size>
+            <width>908</width>
+            <height>16777215</height>
+           </size>
           </property>
-          <widget class="QTableWidget" name="tableUser">
-           <property name="editTriggers">
-            <set>QAbstractItemView::NoEditTriggers</set>
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::SingleSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <attribute name="horizontalHeaderCascadingSectionResizes">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="verticalHeaderStretchLastSection">
+           <bool>false</bool>
+          </attribute>
+          <row>
+           <property name="text">
+            <string>psmith</string>
            </property>
-           <property name="selectionMode">
-            <enum>QAbstractItemView::SingleSelection</enum>
+          </row>
+          <row>
+           <property name="text">
+            <string>pwhite</string>
            </property>
-           <property name="selectionBehavior">
-            <enum>QAbstractItemView::SelectRows</enum>
+          </row>
+          <row>
+           <property name="text">
+            <string>djohnson</string>
            </property>
-           <row>
-            <property name="text">
-             <string>toto</string>
-            </property>
-           </row>
-           <column>
-            <property name="text">
-             <string>Adresse mail</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>Nom</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>Prénom</string>
-            </property>
-           </column>
-           <item row="0" column="0">
-            <property name="text">
-             <string>toto@gmail.com</string>
-            </property>
-           </item>
-           <item row="0" column="1">
-            <property name="text">
-             <string>Toto</string>
-            </property>
-           </item>
-           <item row="0" column="2">
-            <property name="text">
-             <string>To</string>
-            </property>
-           </item>
-          </widget>
-          <widget class="QSplitter" name="userLayout">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
+          </row>
+          <column>
+           <property name="text">
+            <string>Adresse mail</string>
            </property>
-           <widget class="QWidget" name="layoutWidget_2">
-            <layout class="QFormLayout" name="userFormLayout">
-             <property name="fieldGrowthPolicy">
-              <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
-             </property>
-             <item row="1" column="0">
-              <widget class="QLabel" name="label">
-               <property name="text">
-                <string>login:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="1">
-              <widget class="QLineEdit" name="lineEdit"/>
-             </item>
-             <item row="2" column="0">
-              <widget class="QLabel" name="label_2">
-               <property name="text">
-                <string>mot de passe:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="1">
-              <widget class="QLineEdit" name="lineEdit_6">
-               <property name="echoMode">
-                <enum>QLineEdit::Password</enum>
-               </property>
-              </widget>
-             </item>
-             <item row="3" column="0">
-              <widget class="QLabel" name="label_3">
-               <property name="text">
-                <string>mot de passe (confirmation):</string>
-               </property>
-              </widget>
-             </item>
-             <item row="3" column="1">
-              <widget class="QLineEdit" name="lineEdit_2">
-               <property name="echoMode">
-                <enum>QLineEdit::Password</enum>
-               </property>
-              </widget>
-             </item>
-             <item row="4" column="0">
-              <widget class="QLabel" name="label_4">
-               <property name="text">
-                <string>adresse mail:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="4" column="1">
-              <widget class="QLineEdit" name="lineEdit_3"/>
-             </item>
-             <item row="5" column="0">
-              <widget class="QLabel" name="label_5">
-               <property name="text">
-                <string>nom:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="5" column="1">
-              <widget class="QLineEdit" name="lineEdit_4"/>
-             </item>
-             <item row="6" column="0">
-              <widget class="QLabel" name="label_6">
-               <property name="text">
-                <string>prénom:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="6" column="1">
-              <widget class="QLineEdit" name="lineEdit_5"/>
-             </item>
-            </layout>
-           </widget>
-           <widget class="QWidget" name="">
-            <layout class="QHBoxLayout" name="horizontalLayout_4">
-             <item>
-              <layout class="QVBoxLayout" name="userGroupLayout">
-               <item>
-                <layout class="QFormLayout" name="formLayout">
-                 <item row="0" column="0">
-                  <widget class="QLabel" name="label_8">
-                   <property name="text">
-                    <string>Groupe principal:</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="1">
-                  <widget class="QComboBox" name="comboBox"/>
-                 </item>
-                </layout>
-               </item>
-               <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_3">
-                 <item>
-                  <widget class="QLabel" name="label_9">
-                   <property name="text">
-                    <string>Autres groupes: </string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <layout class="QVBoxLayout" name="verticalLayout_2">
-                   <item>
-                    <layout class="QHBoxLayout" name="horizontalLayout_2">
-                     <item>
-                      <widget class="QComboBox" name="comboBox_2"/>
-                     </item>
-                     <item>
-                      <widget class="QPushButton" name="pushButton_5">
-                       <property name="text">
-                        <string>Ajouter à ce groupe</string>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
-                   </item>
-                   <item>
-                    <widget class="QListWidget" name="listWidget"/>
-                   </item>
-                   <item>
-                    <widget class="QPushButton" name="pushButton_6">
-                     <property name="text">
-                      <string>Enlever de ce groupe</string>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </item>
-                </layout>
-               </item>
-              </layout>
-             </item>
-             <item>
-              <layout class="QVBoxLayout" name="userButtonLayout">
-               <item>
-                <widget class="QPushButton" name="pushButton">
-                 <property name="text">
-                  <string>Ajouter</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QPushButton" name="pushButton_2">
-                 <property name="text">
-                  <string>Modifier</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QPushButton" name="pushButton_3">
-                 <property name="text">
-                  <string>Supprimer</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QPushButton" name="pushButton_4">
-                 <property name="text">
-                  <string>Annuler</string>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </item>
-            </layout>
-           </widget>
-          </widget>
+          </column>
+          <column>
+           <property name="text">
+            <string>Nom</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Prénom</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Groupe principal</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Groupes secondaires</string>
+           </property>
+          </column>
+          <item row="0" column="0">
+           <property name="text">
+            <string>paulsmith@mail.com</string>
+           </property>
+          </item>
+          <item row="0" column="1">
+           <property name="text">
+            <string>Smith</string>
+           </property>
+          </item>
+          <item row="0" column="2">
+           <property name="text">
+            <string>Paul</string>
+           </property>
+          </item>
+          <item row="0" column="3">
+           <property name="text">
+            <string>Admin</string>
+           </property>
+          </item>
+          <item row="0" column="4">
+           <property name="text">
+            <string>Moderator</string>
+           </property>
+          </item>
+          <item row="1" column="0">
+           <property name="text">
+            <string>petersonwhite@mail.com</string>
+           </property>
+          </item>
+          <item row="1" column="1">
+           <property name="text">
+            <string>White</string>
+           </property>
+          </item>
+          <item row="1" column="2">
+           <property name="text">
+            <string>Peterson</string>
+           </property>
+          </item>
+          <item row="1" column="3">
+           <property name="text">
+            <string>Moderator</string>
+           </property>
+          </item>
+          <item row="2" column="0">
+           <property name="text">
+            <string>jackjohnsmith@mail.com</string>
+           </property>
+          </item>
+          <item row="2" column="1">
+           <property name="text">
+            <string>Johnson</string>
+           </property>
+          </item>
+          <item row="2" column="2">
+           <property name="text">
+            <string>Jack</string>
+           </property>
+          </item>
+          <item row="2" column="3">
+           <property name="text">
+            <string>User</string>
+           </property>
+          </item>
          </widget>
         </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <layout class="QFormLayout" name="formLayout">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label">
+              <property name="text">
+               <string>login:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="lineEditLogin"/>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="label_2">
+              <property name="text">
+               <string>mot de passe:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLineEdit" name="lineEditMDP">
+              <property name="echoMode">
+               <enum>QLineEdit::Password</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_3">
+              <property name="text">
+               <string>mot de passe (confirmation):</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QLineEdit" name="lineEditMDPConfirmation">
+              <property name="echoMode">
+               <enum>QLineEdit::Password</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="label_4">
+              <property name="text">
+               <string>adresse mail:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QLineEdit" name="lineEditMail"/>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="label_5">
+              <property name="text">
+               <string>nom:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QLineEdit" name="lineEditNom"/>
+            </item>
+            <item row="5" column="0">
+             <widget class="QLabel" name="label_6">
+              <property name="text">
+               <string>prénom:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="1">
+             <widget class="QLineEdit" name="lineEditPrenom"/>
+            </item>
+            <item row="6" column="0">
+             <widget class="QLabel" name="label_12">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout">
+            <item>
+             <widget class="QLabel" name="label_8">
+              <property name="text">
+               <string>Groupes</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout">
+              <item>
+               <widget class="QListWidget" name="userGroups1"/>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_3">
+                <item>
+                 <widget class="QPushButton" name="pushButtonSetToGroupePrincipal">
+                  <property name="text">
+                   <string>Définir comme groupe principal</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushButtonUserAddGroup">
+                  <property name="text">
+                   <string>&gt;&gt;</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushButtonUserRemoveGroup">
+                  <property name="text">
+                   <string>&lt;&lt;</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QListWidget" name="userGroups2"/>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <widget class="QPushButton" name="pushButtonAjouterUser">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>Ajouter</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButtonModifierUser">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>Modifier</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButtonSupprimerUser">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>Supprimer</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButtonAnnulerUser">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>Annuler</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
        </layout>
+       <zorder>tableUser</zorder>
+       <zorder></zorder>
       </widget>
       <widget class="QWidget" name="tabGroups">
+       <attribute name="icon">
+        <iconset resource="ressources.qrc">
+         <normaloff>:/new/prefix1/img/config-users.png</normaloff>:/new/prefix1/img/config-users.png</iconset>
+       </attribute>
        <attribute name="title">
         <string>Groupes</string>
        </attribute>
@@ -263,12 +365,97 @@
           <property name="orientation">
            <enum>Qt::Vertical</enum>
           </property>
-          <widget class="QTableWidget" name="tableWidget"/>
+          <widget class="QTableWidget" name="tableGroups">
+           <attribute name="horizontalHeaderVisible">
+            <bool>false</bool>
+           </attribute>
+           <attribute name="horizontalHeaderStretchLastSection">
+            <bool>true</bool>
+           </attribute>
+           <attribute name="verticalHeaderVisible">
+            <bool>false</bool>
+           </attribute>
+           <row>
+            <property name="text">
+             <string>Admin</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>Moderator</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>User</string>
+            </property>
+           </row>
+           <column>
+            <property name="text">
+             <string>N°</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Libellé</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Déscriptif</string>
+            </property>
+           </column>
+           <item row="0" column="0">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </item>
+           <item row="0" column="1">
+            <property name="text">
+             <string>Admin</string>
+            </property>
+           </item>
+           <item row="0" column="2">
+            <property name="text">
+             <string>Master of the system</string>
+            </property>
+           </item>
+           <item row="1" column="0">
+            <property name="text">
+             <string>1</string>
+            </property>
+           </item>
+           <item row="1" column="1">
+            <property name="text">
+             <string>Moderator</string>
+            </property>
+           </item>
+           <item row="1" column="2">
+            <property name="text">
+             <string>Hand users</string>
+            </property>
+           </item>
+           <item row="2" column="0">
+            <property name="text">
+             <string>2</string>
+            </property>
+           </item>
+           <item row="2" column="1">
+            <property name="text">
+             <string>User</string>
+            </property>
+           </item>
+           <item row="2" column="2">
+            <property name="text">
+             <string>People who uses</string>
+            </property>
+           </item>
+          </widget>
           <widget class="QSplitter" name="splitter_2">
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
-           <widget class="QWidget" name="">
+           <widget class="QWidget" name="layoutWidget">
             <layout class="QFormLayout" name="groupFormLayout">
              <item row="0" column="0">
               <widget class="QLabel" name="label_7">
@@ -285,7 +472,7 @@
               </widget>
              </item>
              <item row="1" column="1">
-              <widget class="QLineEdit" name="lineEdit_7"/>
+              <widget class="QLineEdit" name="lineEditGroupLibelle"/>
              </item>
              <item row="2" column="0">
               <widget class="QLabel" name="label_11">
@@ -294,39 +481,51 @@
                </property>
               </widget>
              </item>
-             <item row="2" column="1">
-              <widget class="QTextEdit" name="textEdit"/>
-             </item>
              <item row="0" column="1">
-              <widget class="QSpinBox" name="spinBox"/>
+              <widget class="QSpinBox" name="spinBoxGroupNum"/>
+             </item>
+             <item row="2" column="1">
+              <widget class="QPlainTextEdit" name="plainTextEditGroupe"/>
              </item>
             </layout>
            </widget>
            <widget class="QWidget" name="layoutWidget_3">
             <layout class="QVBoxLayout" name="groupButtonsLaout">
              <item>
-              <widget class="QPushButton" name="pushButton_7">
+              <widget class="QPushButton" name="pushButtonAddGroup">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
                <property name="text">
                 <string>Ajouter</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="pushButton_8">
+              <widget class="QPushButton" name="pushButtonEditGroup">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
                <property name="text">
                 <string>Modifier</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="pushButton_9">
+              <widget class="QPushButton" name="pushButtonRemoveGroup">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
                <property name="text">
                 <string>Supprimer</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="pushButton_10">
+              <widget class="QPushButton" name="pushButtonCancelGroup">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
                <property name="text">
                 <string>Annuler</string>
                </property>
@@ -348,10 +547,18 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>948</width>
+     <width>1218</width>
      <height>24</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="action_Sauvegarde"/>
+    <addaction name="action_Ouvrir"/>
+   </widget>
+   <addaction name="menuFile"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -362,8 +569,20 @@
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="action_Sauvegarde">
+   <property name="text">
+    <string>&amp;Sauvegarder</string>
+   </property>
+  </action>
+  <action name="action_Ouvrir">
+   <property name="text">
+    <string>&amp;Ouvrir</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="ressources.qrc"/>
+ </resources>
  <connections/>
 </ui>
